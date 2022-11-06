@@ -1,0 +1,11 @@
+
+#!/bin/bash
+
+echo "building control_GPIO.cpp"
+g++ control_GPIO.cpp -o control_GPIOC
+
+echo "setting p9.12 LED to output"
+config-pin p9.12 gpio
+
+echo "setting p8.16 button to input"
+config-pin p8.16 gpio_input
